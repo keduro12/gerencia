@@ -214,7 +214,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="#"  @click="useUser.signOutUser()">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -340,7 +340,9 @@
 </template>
 
 <script setup>
+import {useUserStore} from "@/store/User.js"
 
+const useUser = useUserStore()
 </script>
 
 <style scoped>
