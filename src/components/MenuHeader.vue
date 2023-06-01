@@ -4,7 +4,7 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
+        <img src="src/assets/favicon.png" alt="">
         <span class="d-none d-lg-block">StartCompany</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -236,7 +236,7 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="index.html">
           <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
+          <span>Clientes</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
@@ -271,23 +271,9 @@
       <li class="nav-item">
         <a class="nav-link collapsed" href="pages-register.html">
           <i class="bi bi-card-list"></i>
-          <span>Register</span>
+          <span>Productos</span>
         </a>
       </li><!-- End Register Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-login.html">
-          <i class="bi bi-box-arrow-in-right"></i>
-          <span>Login</span>
-        </a>
-      </li><!-- End Login Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li><!-- End Error 404 Page Nav -->
 
     </ul>
 

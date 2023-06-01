@@ -8,9 +8,9 @@
             <div class="col-lg-4 col-md-6 d-flex flex-column align-items-center justify-content-center">
 
               <div class="d-flex justify-content-center py-4">
-                <a href="index.html" class="logo d-flex align-items-center w-auto">
-                  <img src="assets/img/logo.png" alt="">
-                  <span class="d-none d-lg-block">NiceAdmin</span>
+                <a href="https://sstarcompaty.netlify.app/" class="logo d-flex align-items-center w-auto">
+                  <img src="src/assets/favicon.png" alt="">
+                  <span class="d-none d-lg-block">StarCompany</span>
                 </a>
               </div><!-- End Logo -->
 
@@ -19,19 +19,19 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Create an Account</h5>
-                    <p class="text-center small">Enter your personal details to create account</p>
+                    <h5 class="card-title text-center pb-0 fs-4">Crear Cuenta</h5>
+                    <p class="text-center small">Ingresa los datos para crear una cuenta en StarCompany</p>
                   </div>
 
                   <form class="row g-3 needs-validation" novalidate @submit.prevent="handleSubmit">
                     <div class="col-12">
-                      <label for="yourName" class="form-label">Your Name</label>
+                      <label for="yourName" class="form-label">Nombre de la empresa</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Please, enter your name!</div>
                     </div>
 
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Your Email</label>
+                      <label for="yourEmail" class="form-label">Correo</label>
                       <input type="email" name="email" class="form-control" id="yourEmail" required v-model.trim="email">
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
@@ -46,24 +46,16 @@
                     </div> -->
 
                     <div class="col-12">
-                      <label for="yourPassword" class="form-label">Password</label>
+                      <label for="yourPassword" class="form-label">Contraseña</label>
                       <input type="password" name="password" class="form-control" id="yourPassword" required v-model.trim="password">
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
-
+                    <br>
                     <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
-                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and
-                            conditions</a></label>
-                        <div class="invalid-feedback">You must agree before submitting.</div>
-                      </div>
+                      <button class="btn btn-primary w-100" type="submit">Crear Cuenta</button>
                     </div>
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Create Account</button>
-                    </div>
-                    <div class="col-12">
-                      <p class="small mb-0">Already have an account? <a href="pages-login.html">Log in</a></p>
+                      <p style="text-align: center;" class="small mb-0">Ya tienes cuenta? <RouterLink to="/login">Iniciar sesión</RouterLink> </p>
                     </div>
                   </form>
 
@@ -75,7 +67,7 @@
                 <!-- You can delete the links only if you purchased the pro version. -->
                 <!-- Licensing information: https://bootstrapmade.com/license/ -->
                 <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+                <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
               </div>
 
             </div>

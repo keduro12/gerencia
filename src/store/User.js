@@ -23,6 +23,8 @@ export const useUserStore = defineStore('user', {
                 router.push("login")
 
             } catch (error) {
+                return error.code
+                
                 console.log(error.code)
             }
         }
