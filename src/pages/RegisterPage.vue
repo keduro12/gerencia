@@ -23,7 +23,7 @@
                     <p class="text-center small">Enter your personal details to create account</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" novalidate @submit.prevent="handleSubmit">
                     <div class="col-12">
                       <label for="yourName" class="form-label">Your Name</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
@@ -32,29 +32,30 @@
 
                     <div class="col-12">
                       <label for="yourEmail" class="form-label">Your Email</label>
-                      <input type="email" name="email" class="form-control" id="yourEmail" required>
+                      <input type="email" name="email" class="form-control" id="yourEmail" required v-model.trim="email">
                       <div class="invalid-feedback">Please enter a valid Email adddress!</div>
                     </div>
 
-                    <div class="col-12">
+                    <!-- <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
                         <input type="text" name="username" class="form-control" id="yourUsername" required>
                         <div class="invalid-feedback">Please choose a username.</div>
                       </div>
-                    </div>
+                    </div> -->
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Password</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
+                      <input type="password" name="password" class="form-control" id="yourPassword" required v-model.trim="password">
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
 
                     <div class="col-12">
                       <div class="form-check">
                         <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
-                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
+                        <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and
+                            conditions</a></label>
                         <div class="invalid-feedback">You must agree before submitting.</div>
                       </div>
                     </div>
@@ -88,7 +89,19 @@
 </template>
 
 <script setup>
+  import { useUserStore } from "@/store/User.js"
+  import { ref } from "vue";
 
+  const userStore = useUserStore();
+
+  const email = ref();
+  const password = ref();
+
+  const handleSubmit = async () => {
+    await userStore.registerUser(email.value, password.value)
+
+    console.log("hola")
+  }
 </script>
 
 <style scoped>
